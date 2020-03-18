@@ -23,13 +23,15 @@
     font-weight: 400;
 }
     
-.navbar p {
+.navbar p.section{
     font-size: 32px;
     font-weight: bold;
     margin-left: -0.9em;
     margin-right: 1.5em;
     margin-top: 0.42em;
     color: #1659B0;
+    cursor: pointer;
+
 }
     
 .navbar a {
@@ -50,6 +52,7 @@
     margin-left: 5.8em;
     position: relative;
     top: 0.15em;
+    cursor: pointer;
 }
     
 .navbar button {

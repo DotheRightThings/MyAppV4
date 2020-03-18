@@ -15,7 +15,7 @@ export class FundsComponent implements OnInit {
     {"marketname":"RHB Emerging Markets Bond Fund","price":0.6021,"percent":"1.07"},
     {"marketname":"RHB Golden Dragon Fund","price":0.559,"percent":"0.23"},
     {"marketname":"RHB Dana Hazeem","price":0.4275,"percent":"0.12"}
-    ];;
+    ];
 
     ngOnInit() {}
 }

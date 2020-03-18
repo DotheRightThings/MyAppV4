@@ -38,6 +38,10 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 registerLocaleData(en);
 import {NZ_I18N, en_US } from 'ng-zorro-antd';
+import { LoginComponent } from './login/login.component';
+import { UserloginComponent } from './login/userlogin/userlogin.component';
+import { AccCreationComponent } from './acc-creation/acc-creation.component';
+import { LoginbackgroundComponent } from './login/loginbackground/loginbackground.component';
 
 
 
@@ -75,6 +79,10 @@ import {NZ_I18N, en_US } from 'ng-zorro-antd';
     RiskComponent,
     TopfundComponent,
     DisclaimerComponent,
+    LoginComponent,
+    UserloginComponent,
+    AccCreationComponent,
+    LoginbackgroundComponent,
   ],
   imports: [
     BrowserModule,

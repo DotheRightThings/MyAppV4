@@ -14,11 +14,11 @@
     height: 3em;
     width: 22.5em;
     background-color: white;
+    border: 1.8px solid #F0F0F0;
     border-radius: 5px;
     top: 1.8em;
     left: 1.63em;
     margin-left: auto;
-    border: 1.8px solid #F0F0F0;
 }
 
 .inputcontainer a{
