@@ -12,7 +12,7 @@
     width: 100%;
 }
     
-.navbar a,.logoImage,.navbar p {
+.logoImage,.navbar p {
     float: left;
     color: #555555;
     text-align: center;
@@ -30,20 +30,8 @@
     margin-top: 0.42em;
     color: #1659B0;
     cursor: pointer;
+}
 
-}
-    
-.navbar a {
-    margin-top: 1.32em;
-    margin-left: 0.4em;
-}
-    
-.navbar a:hover {
-    color: #2B8FDB;
-    font-size: 113%;
-    font-weight:bold;
-}
-    
 .logoImage {
     width: 107px;
     height: 39.2px;
@@ -53,25 +41,3 @@
     top: 0.15em;
     cursor: pointer;
 }
-    
-.navbar button {
-    background-color: rgb(24, 101, 172);
-    font-size: 18px;
-    font-weight: 400;
-    color: white;
-    padding: 12px 27px 12px 27px;
-    margin: 14px 0;
-    right: 6.5em;
-    top: 0em;
-    position: absolute;
-    border: none;
-    cursor: pointer;
-    border-radius: 25px;
-}
-    
-.navbar button i {
-    margin-right: 7px;
-    color:white;
-    font-size: 24px;
-}
-    

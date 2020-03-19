@@ -6,3 +6,8 @@
     left: 0;
     top: 13.7em;
 }
+
+:host-context(.upload-id) .container{
+    height: 35em;
+}
+   

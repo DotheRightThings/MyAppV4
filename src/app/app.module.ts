@@ -42,9 +42,14 @@ import { LoginComponent } from './login/login.component';
 import { UserloginComponent } from './login/userlogin/userlogin.component';
 import { AccCreationComponent } from './acc-creation/acc-creation.component';
 import { LoginbackgroundComponent } from './login/loginbackground/loginbackground.component';
-
-
-
+import { MinTopBannerComponent } from './acc-creation/min-top-banner/min-top-banner.component';
+import { UploadIdComponent } from './acc-creation/upload-id/upload-id.component';
+import { PersonalIComponent } from './acc-creation/personal-i/personal-i.component';
+import { OtherIComponent } from './acc-creation/other-i/other-i.component';
+import { AccReviewComponent } from './acc-creation/acc-review/acc-review.component';
+import { ToptitleRegisterComponent } from './acc-creation/toptitle-register/toptitle-register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -83,12 +88,20 @@ import { LoginbackgroundComponent } from './login/loginbackground/loginbackgroun
     UserloginComponent,
     AccCreationComponent,
     LoginbackgroundComponent,
+    MinTopBannerComponent,
+    UploadIdComponent,
+    PersonalIComponent,
+    OtherIComponent,
+    AccReviewComponent,
+    ToptitleRegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NzDatePickerModule
+    NzDatePickerModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     {provide: NZ_I18N, useValue: en_US}

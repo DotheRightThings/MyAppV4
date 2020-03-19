@@ -1,8 +1,0 @@
-@font-face {
-    font-family: adobe-clean;
-    src: url('/assets/AdobeClean-Regular.ttf');
-}
-*{
-    font-family: "adobe-clean";
-    color: #454545;
-}
