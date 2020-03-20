@@ -1,1 +1,60 @@
-<p>personal-i works!</p>
+<app-min-top-banner></app-min-top-banner>
+<app-toptitle-register></app-toptitle-register>
+<app-background></app-background>
+<div class="wrapper">
+    <div class="inner" *ngFor="let i of stages; let x = index" [ngClass]=
+    "{'inner-large':i.name.length>15,
+    'inner-xlarge':i.name.length>18,
+    'inner-small':i.name.length<7
+    }">
+        <div class="circle" [ngClass]="{'cur-circle':x+1===2,'com-circle':x+1<2}">
+            <p class="index" *ngIf="x+1>=2;else completed">
+                {{x+1}}
+            </p>
+            <ng-template #completed>
+                <i class="fas fa-check" style="font-size:23px;left:0.35em;top:0.5em;position: relative;"></i>
+            </ng-template>
+        </div>
+        <p class="stage" [ngClass]="{'cur-stage':x+1<=2}">{{i.name}}</p>
+        <div class="horizonline" [ngClass]="{'no-line':x+1===4}"></div>
+    </div>
+    <div class="horizonline" style="width:103.9%;left:-1.5em;top:-1.5em;margin:0;border-bottom: 1.2px solid rgb(240, 240, 240);;"></div>
+    <p class="describ">{{h2}}</p>
+
+    <div *ngFor="let i of head_list; let x = index" style="margin-bottom: -1.5em;">
+        <p class="head">{{i.name}}</p>
+        <p class="detail">{{i.detail}}</p>
+        <div *ngIf="x===0;else second">
+            <label class="container" *ngFor="let i of list_1" >{{i.type}}
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <ng-template #second>
+            <label class="container" *ngFor="let i of list_2" style="top: -5.5em;">{{i.type}}
+                <input type="radio" checked="checked" name="radio2">
+                <span class="checkmark"></span>
+            </label>
+        </ng-template>
+    </div>
+
+    <p class="head">Account Information</p>
+    <div *ngFor="let i of account_i"style="margin-bottom: -4em;">
+        <p class="detail">{{i.name}}</p>
+            <div *ngIf="i.name==='Username* :'">
+                <input type="text" placeholder="wernsheng" name="uname" required>
+                <i class="far fa-user"></i>
+            </div>
+            <div *ngIf="i.name==='Password* :'||i.name==='Confirm Password* :'" >
+                <input type="password" value="ifast!12345" name="psw">
+                <i class="material-icons-outlined" style="top:-3.4em;font-size:20px;left:-25.55em;">lock</i>
+                <i class="far fa-eye-slash" style="cursor:pointer;top:-4.35em;font-size:20px;transform: scaleX(-1);left:-15.7em;font-size:16px"></i>
+                <p class="password" *ngIf="i.name==='Password* :'">Use 8 or more characters with a mix of letters, numbers & symbols</p>
+            </div>
+            <div *ngIf="i.name==='Security Question* :'">
+                <select class="content">
+                    <option *ngFor="let i of security_q">{{i.question}}</option>   
+                </select>
+            </div>
+    </div>
+</div>

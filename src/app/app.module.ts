@@ -50,6 +50,7 @@ import { AccReviewComponent } from './acc-creation/acc-review/acc-review.compone
 import { ToptitleRegisterComponent } from './acc-creation/toptitle-register/toptitle-register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FileUploadComponent } from './acc-creation/upload-id/file-upload/file-upload.component';
 
 
 @NgModule({
@@ -94,6 +95,7 @@ import { HttpClientModule } from '@angular/common/http';
     OtherIComponent,
     AccReviewComponent,
     ToptitleRegisterComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,

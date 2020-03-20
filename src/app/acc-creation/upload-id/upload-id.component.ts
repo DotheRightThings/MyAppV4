@@ -11,6 +11,8 @@ export class UploadIdComponent implements OnInit {
 
   constructor() { }
 
+  h2="Your account opening application is subject to RHBAM's approval. You will be notified upon successful processing."
+
   stages = [
     {'name':'Upload Your ID'},
     {'name':'Personal Information'},

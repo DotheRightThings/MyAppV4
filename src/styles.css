@@ -9,5 +9,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 *{
     font-family: "adobe-clean";
 }
-
+html{
+    zoom: 1.25;
+    /*transform: scale(0.8);*/
+}
 
