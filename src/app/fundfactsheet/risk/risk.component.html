@@ -11,6 +11,7 @@
     <div class="innercontainer" style="top:-0.7em;position:relative;">
         <p class="period" *ngFor="let i of risks">{{i.type}}</p>
     </div>
-    <p class="data" *ngFor="let i of risks" [ngClass]="{'data-negative':i.percentage<0}">{{i.percentage | number:'1.2'}}%</p>
-    <p class="descr-small">{{update}}</p>
+    <p class="data" *ngFor="let i of risks" [ngClass]="{'data-negative':i.percentage<0}">
+        {{i.percentage | number:'1.2'}}%</p>
+    <p class="descr-small">{{update2}}</p>
 </div>

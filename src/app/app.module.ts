@@ -37,7 +37,7 @@ import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 registerLocaleData(en);
-import {NZ_I18N, en_US } from 'ng-zorro-antd';
+import { NZ_I18N, en_US } from 'ng-zorro-antd';
 import { LoginComponent } from './login/login.component';
 import { UserloginComponent } from './login/userlogin/userlogin.component';
 import { AccCreationComponent } from './acc-creation/acc-creation.component';
@@ -48,9 +48,10 @@ import { PersonalIComponent } from './acc-creation/personal-i/personal-i.compone
 import { OtherIComponent } from './acc-creation/other-i/other-i.component';
 import { AccReviewComponent } from './acc-creation/acc-review/acc-review.component';
 import { ToptitleRegisterComponent } from './acc-creation/toptitle-register/toptitle-register.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FileUploadComponent } from './acc-creation/upload-id/file-upload/file-upload.component';
+import { UserDataService } from './user-data.service';
 
 
 @NgModule({
@@ -95,7 +96,7 @@ import { FileUploadComponent } from './acc-creation/upload-id/file-upload/file-u
     OtherIComponent,
     AccReviewComponent,
     ToptitleRegisterComponent,
-    FileUploadComponent
+    FileUploadComponent,
   ],
   imports: [
     BrowserModule,
@@ -103,10 +104,12 @@ import { FileUploadComponent } from './acc-creation/upload-id/file-upload/file-u
     BrowserAnimationsModule,
     NzDatePickerModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [
-    {provide: NZ_I18N, useValue: en_US}
+    { provide: NZ_I18N, useValue: en_US },
+    UserDataService,
   ],
   bootstrap: [AppComponent]
 })

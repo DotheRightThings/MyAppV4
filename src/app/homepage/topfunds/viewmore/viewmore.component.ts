@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './viewmore.component.html',
   styleUrls: ['./viewmore.component.css']
 })
-export class ViewmoreComponent {}
+export class ViewmoreComponent { }

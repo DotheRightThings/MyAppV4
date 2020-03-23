@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './verticline.component.html',
   styleUrls: ['./verticline.component.css']
 })
-export class VerticlineComponent {}
+export class VerticlineComponent { }

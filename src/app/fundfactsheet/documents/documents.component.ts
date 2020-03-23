@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-documents',
@@ -9,12 +9,7 @@ export class DocumentsComponent implements OnInit {
 
   constructor() { }
 
-  documents = [
-    {"prefix":"P","term":"Prospectus"},
-    {"prefix":"AR","term":"Semi-annual/Annual Report"},
-    {"prefix":"PH","term":"Product Highlights Sheet"},
-    {"prefix":"FF","term":"Fund Factsheet"},
-    ];;
+  @Input() documents;
 
   ngOnInit(): void {
   }

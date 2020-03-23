@@ -8,9 +8,9 @@ describe('PerformanceComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PerformanceComponent ]
+      declarations: [PerformanceComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

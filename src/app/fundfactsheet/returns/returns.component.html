@@ -4,7 +4,7 @@
     <p class="descr">Fund Returns lets you derive the performance of a fund over the specified period.</p>
     <nz-range-picker></nz-range-picker>
     <p class="generator">GENERATE</p>
-    <div class="inner" *ngFor="let i of sections">
+    <div class="inner" *ngFor="let i of dates">
         <p class="section">{{i.name}}</p>
     </div>
     <div class="datacon" *ngFor="let i of returns">
@@ -13,5 +13,3 @@
         <p class="data1" style="left:28.05em;">{{i.fundreturn}}</p>
     </div>
 </div>
-
-

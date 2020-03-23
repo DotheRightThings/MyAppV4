@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './sloganbanner.component.html',
   styleUrls: ['./sloganbanner.component.css']
 })
-export class SloganbannerComponent {}
+export class SloganbannerComponent { }

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from  '@angular/forms';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-upload-id',
@@ -11,14 +11,8 @@ export class UploadIdComponent implements OnInit {
 
   constructor() { }
 
-  h2="Your account opening application is subject to RHBAM's approval. You will be notified upon successful processing."
-
-  stages = [
-    {'name':'Upload Your ID'},
-    {'name':'Personal Information'},
-    {'name':'Other Information'},
-    {'name':'Review'},
-  ]
+  @Input() h2;
+  @Input() stages;
 
   ngOnInit(): void {
   }

@@ -8,9 +8,9 @@ describe('LoginbackgroundComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginbackgroundComponent ]
+      declarations: [LoginbackgroundComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

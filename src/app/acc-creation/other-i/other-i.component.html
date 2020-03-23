@@ -2,12 +2,11 @@
 <app-toptitle-register></app-toptitle-register>
 <app-background class="other-i"></app-background>
 <div class="wrapper">
-    <div class="inner" *ngFor="let i of stages; let x = index" [ngClass]=
-    "{'inner-large':i.name.length>15,
+    <div class="inner" *ngFor="let i of stages; let x = index" [ngClass]="{'inner-large':i.name.length>15,
     'inner-xlarge':i.name.length>18,
     'inner-small':i.name.length<7
     }">
-        <div class="circle" *ngIf="x+1>=3;else completed" [ngClass]="{'cur-circle':x+1===3}" >
+        <div class="circle" *ngIf="x+1>=3;else completed" [ngClass]="{'cur-circle':x+1===3}">
             <p class="index">
                 {{x+1}}
             </p>
@@ -22,13 +21,15 @@
         </ng-template>
         <p class="stage" *ngIf="x+1>3">{{i.name}}</p>
         <p class="cur-stage" *ngIf="x+1===3">{{i.name}}</p>
-        <p class="com-stage"  *ngIf="x+1===1" routerLink="/acc-creation" routerLinkActive="active">{{i.name}}</p>
-        <p class="com-stage"  *ngIf="x+1===2" routerLink="/personal-i" routerLinkActive="active">{{i.name}}</p>
+        <p class="com-stage" *ngIf="x+1===1" routerLink="/acc-creation" routerLinkActive="active">{{i.name}}</p>
+        <p class="com-stage" *ngIf="x+1===2" routerLink="/personal-i" routerLinkActive="active">{{i.name}}</p>
         <div class="horizonline" [ngClass]="{'no-line':x+1===4,'com-line':x+1<3}"></div>
     </div>
 
     <div style="margin-top:-0.75em;position:relative;">
-        <div class="horizonline" style="width:103.9%;left:-1.5em;top:-1.5em;margin:0;border-bottom: 1.2px solid rgb(240, 240, 240);z-index:1;"></div>
+        <div class="horizonline"
+            style="width:103.9%;left:-1.5em;top:-1.5em;margin:0;border-bottom: 1.2px solid rgb(240, 240, 240);z-index:1;">
+        </div>
         <p class="describ">{{h2}}</p>
 
         <p class="head">Other Information</p>
@@ -37,42 +38,37 @@
             *ngIf="other_i==='Mother'">
 
         <p class="head" style="margin-top:0em;">Occupation Information</p>
-        <div *ngFor="let i of occup_i"style="margin-bottom: -4em;">
+        <div *ngFor="let i of occup_i" style="margin-bottom: -4em;">
             <p class="detail">{{i.name}}</p>
             <div *ngIf="i.name==='Source of Income* :'">
-                <select class="content" >
-                    <option *ngFor="let i of source_of_inc">{{i.type}}</option>   
+                <select class="content">
+                    <option *ngFor="let i of source_of_inc">{{i.type}}</option>
                 </select>
                 <select class="content" style="top:-4.5em;left:-21em;width: 10em;">
-                    <option *ngFor="let i of type_of_inc">{{i.type}}</option>   
+                    <option *ngFor="let i of type_of_inc">{{i.type}}</option>
                 </select>
             </div>
-            <select class="content" 
-                *ngIf="i.name==='Occupation* :'">
-                <option *ngFor="let i of occupations">{{i.type}}</option>   
+            <select class="content" *ngIf="i.name==='Occupation* :'">
+                <option *ngFor="let i of occupations">{{i.type}}</option>
             </select>
-            <input type="text" placeholder="iFast Service Centre Sdn Bhd" name="emp-Name" style="padding-left: 1.2em;" required
-                *ngIf="i.name==='Name of Employer / Business* :'">
-            <select class="content" 
-                *ngIf="i.names==='Employer'">
-                <option *ngFor="let i of offices_loc">{{i.type}}</option>   
+            <input type="text" placeholder="iFast Service Centre Sdn Bhd" name="emp-Name" style="padding-left: 1.2em;"
+                required *ngIf="i.name==='Name of Employer / Business* :'">
+            <select class="content" *ngIf="i.names==='Employer'">
+                <option *ngFor="let i of offices_loc">{{i.type}}</option>
             </select>
-            <select class="content" 
-                *ngIf="i.name==='Nature of Business* :'">
-                <option *ngFor="let i of nature_of_bus">{{i.type}}</option>   
+            <select class="content" *ngIf="i.name==='Nature of Business* :'">
+                <option *ngFor="let i of nature_of_bus">{{i.type}}</option>
             </select>
-            <select class="content" 
-                *ngIf="i.name==='Annual Income* :'">
-                <option *ngFor="let i of annual_inc">{{i.range}}</option>   
+            <select class="content" *ngIf="i.name==='Annual Income* :'">
+                <option *ngFor="let i of annual_inc">{{i.range}}</option>
             </select>
-            <select class="content" 
-                *ngIf="i.name==='Estimate Net Worth* :'">
-                <option *ngFor="let i of net_worth">{{i.range}}</option>   
+            <select class="content" *ngIf="i.name==='Estimate Net Worth* :'">
+                <option *ngFor="let i of net_worth">{{i.range}}</option>
             </select>
         </div>
 
         <p class="head" style="margin-top:2.5em;">Servicing Agent</p>
-        <div *ngFor="let i of serv_ag"style="margin-bottom: -4em;">
+        <div *ngFor="let i of serv_ag" style="margin-bottom: -4em;">
             <p class="detail">{{i.name}}</p>
             <div *ngIf="i.name==='Do you have a preferred Agent?* :'">
                 <label class="container" style="top:-3em;margin-left:-0.2em;color:#707070;">Yes

@@ -23,10 +23,10 @@ export class FileUploadComponent implements OnInit {
 
 
   fileData: File = null;
-  previewUrl:any = null;
+  previewUrl: any = null;
 
 
-  onFileUpload(fileInput: any){
+  onFileUpload(fileInput: any) {
     this.fileData = <File>fileInput.target.files[0];
     this.preview();
   }
@@ -37,35 +37,35 @@ export class FileUploadComponent implements OnInit {
     if (mimeType.match(/image\/*/) == null) {
       return;
     }
- 
-    var reader = new FileReader();      
-    reader.readAsDataURL(this.fileData); 
-    reader.onload = (_event) => { 
-      this.previewUrl = reader.result; 
+
+    var reader = new FileReader();
+    reader.readAsDataURL(this.fileData);
+    reader.onload = (_event) => {
+      this.previewUrl = reader.result;
     }
-}
-
-fileData2: File = null;
-previewUrl2:any = null;
-
-onFileUpload2(fileInput: any){
-  this.fileData2 = <File>fileInput.target.files[0];
-  this.preview2();
-}
-
-preview2() {
-  // Show preview 
-  var mimeType = this.fileData2.type;
-  if (mimeType.match(/image\/*/) == null) {
-    return;
   }
 
-  var reader = new FileReader();      
-  reader.readAsDataURL(this.fileData2); 
-  reader.onload = (_event) => { 
-    this.previewUrl2 = reader.result; 
+  fileData2: File = null;
+  previewUrl2: any = null;
+
+  onFileUpload2(fileInput: any) {
+    this.fileData2 = <File>fileInput.target.files[0];
+    this.preview2();
   }
-}
+
+  preview2() {
+    // Show preview 
+    var mimeType = this.fileData2.type;
+    if (mimeType.match(/image\/*/) == null) {
+      return;
+    }
+
+    var reader = new FileReader();
+    reader.readAsDataURL(this.fileData2);
+    reader.onload = (_event) => {
+      this.previewUrl2 = reader.result;
+    }
+  }
 
   // Submit Form
   submit() {

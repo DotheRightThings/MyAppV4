@@ -8,9 +8,9 @@ describe('ToptitleRegisterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ToptitleRegisterComponent ]
+      declarations: [ToptitleRegisterComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

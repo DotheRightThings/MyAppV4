@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-fundfinder',
@@ -6,15 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fundfinder.component.css']
 })
 export class FundfinderComponent implements OnInit {
-  funds=[
-    {"name":"Search fund"},
-    {"name":"RHB Google Fund"},
-    {"name":"RHB Microsoft Fund"},
-    {"name":"RHB Apple Fund"},
-    {"name":"RHB Transformer Fund"},
-    {"name":"RHB Titanic Fund"},
-    {"name":"RHB London Bridge Fund"},
-    {"name":"RHB Nothing to Fund"},
-  ];
-  ngOnInit(){}
+  @Input() find_funds
+  ngOnInit() { }
 }

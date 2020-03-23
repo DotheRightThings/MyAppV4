@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-topfunds',
   templateUrl: './topfunds.component.html',
   styleUrls: ['./topfunds.component.css']
 })
-export class TopfundsComponent {}
+export class TopfundsComponent {
+  @Input() funds;
+}
