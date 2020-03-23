@@ -133,6 +133,7 @@ button.register{
     left: 8.6em;
     top: -0.7em;
     position: relative;
+    font-weight:bold;
     cursor: pointer;
     border-radius: 25px;
 }

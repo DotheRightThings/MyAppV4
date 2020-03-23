@@ -10,4 +10,17 @@
 :host-context(.upload-id) .container{
     height: 34.7em;
 }
+
+:host-context(.personal-i) .container{
+    height: 180em;
+}
+   
+:host-context(.other-i) .container{
+    height: 75em;
+}
+
+:host-context(.acc-review) .container{
+    height: 195.7em;
+}
+   
    

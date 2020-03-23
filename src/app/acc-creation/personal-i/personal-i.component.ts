@@ -49,6 +49,104 @@ export class PersonalIComponent implements OnInit {
     {'question':'What is your favourite sauce for steak?'},
   ]
 
+  personal_i = [
+    {'name':'Salutation* :'},
+    {'name':'Full Name (as per NRIC/Passport)* :'},
+    {'name':'NRIC Number/Passport (non Malaysian citizen)* :'},
+    {'name':'Date of Birth* :'},
+    {'name':'Country of Birth* :'},
+    {'name':'Nationality* :'},
+    {'name':'Bumiputera Status* :'},
+    {'name':'Race* :'},
+    {'name':'Gender* :'},
+    {'name':'Marital Status* :'}
+  ]
+
+  address_i = [
+    {'name':'Address Line 1* :'},
+    {'name':'Address Line 2 :'},
+    {'name':'Address Line 3 :'},
+    {'name':'Postal Code* :'},
+    {'name':'Town/City* :'},
+    {'name':'State* :'},
+    {'name':'Country* :'},
+    {'name':'Is your correspondence address same as your permanent address?* :'},
+  ]
+
+  contact_i = [
+    {'name':'Email Address* :'},
+    {'name':'Mobile Number* :'},
+    {'name':'Residence/House Number :'},
+    {'name':'Office Number :'}
+  ]
+
+  salutations = [
+    {'salutes':'Mr'},
+    {'salutes':'Mrs'},
+    {'salutes':'Ms'}
+  ]
+
+  countries = [
+    {'country':'Malaysia'},
+    {'country':'China'},
+    {'country':'Italy'},
+    {'country':'Spain'}
+  ]
+
+  nationalities = [
+    {'nationality':'Malaysia'},
+    {'nationality':'China'},
+    {'nationality':'Italy'},
+    {'nationality':'Spain'}
+  ]
+
+  races = [
+    {'race':'Malay'},
+    {'race':'Chinese'},
+    {'race':'India'},
+    {'race':'Others'},
+  ]
+
+  mar_status = [
+    {'status':'Single'},
+    {'status':'Married'},
+    {'status':'Divorced'},
+    {'status':'Widowed'},
+  ]
+
+  states = [
+    {'state':'WILAYAH PERSEKUTUAN KUALA LUMPUR'},
+    {'state':'WILAYAH PERSEKUTUAN PUTRAJAYA'},
+    {'state':'WILAYAH PERSEKUTUAN LABUAN'},
+    {'state':'NEGERI SEMBILAN'},
+    {'state':'SELANGOR'},
+    {'state':'MELAKA'},
+    {'state':'JOHOR'},
+    {'state':'PAHANG'},
+    {'state':'PERAK'},
+    {'state':'KEDAH'},
+    {'state':'PERLIS'},
+    {'state':'PENANG'},
+    {'state':'KELANTAN'},
+    {'state':'TERENGGANU'},
+    {'state':'SABAH'},
+    {'state':'SARAWAK'}
+  ]
+
+  countries_C = [
+    {'country':'MALAYSIA'},
+    {'country':'CHINA'},
+    {'country':'ITALY'},
+    {'country':'SPAIN'}
+  ]
+
+  country_codes = [
+    {'code':'+60'},
+    {'code':'+86'},
+    {'code':'+39'},
+    {'code':'+34'}
+  ]
+
 
   ngOnInit(): void {
   }
