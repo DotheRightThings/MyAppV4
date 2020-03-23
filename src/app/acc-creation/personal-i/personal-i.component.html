@@ -33,13 +33,13 @@
                 <p class="detail">{{i.detail}}</p>
                 <div *ngIf="x===0;else second">
                     <label class="container" *ngFor="let i of list_1">{{i.type}}
-                        <input type="radio" checked="checked" name="radio">
+                        <input type="radio" checked="checked" name="FATCA" [(ngModel)]="FATCA" value="{{i.type}}">
                         <span class="checkmark"></span>
                     </label>
                 </div>
                 <ng-template #second>
                     <label class="container" *ngFor="let i of list_2" style="top: -5.5em;">{{i.type}}
-                        <input type="radio" checked="checked" name="radio2">
+                        <input type="radio" checked="checked" name="CRS" [(ngModel)]="CRS" value="{{i.type}}">
                         <span class="checkmark"></span>
                     </label>
                 </ng-template>
@@ -136,13 +136,36 @@
                 </select>
                 <div *ngIf="i.name==='Is your correspondence address same as your permanent address?* :'">
                     <label class="container" style="top:-3em;margin-left:-0.2em;color:#707070;">Yes
-                        <input type="radio" checked="checked" name="radio5">
+                        <input type="radio" checked="checked" name="sameAdd" [(ngModel)]="model.sameAdd" value=Yes>
                         <span class="checkmark"></span>
                     </label>
                     <label class="container" style="top:-5.4em;margin-left:8em;color:#707070;">No
-                        <input type="radio" checked="checked" name="radio5">
+                        <input type="radio" checked="checked" name="sameAdd" [(ngModel)]="model.sameAdd" value=No>
                         <span class="checkmark"></span>
                     </label>
+                </div>
+            </div>
+
+            <div *ngIf="model.sameAdd==='No'">
+                <p class="head" style="margin-top:2.5em;">Correspondence Address</p>
+                <div *ngFor="let i of address_i | slice:0:7" style="margin-bottom: -4em;">
+                    <p class="detail">{{i.name}}</p>
+                    <input type="text" placeholder="Level 22, iFast Service Centre Sdn Bhd" name="addline1"
+                        style="padding-left: 1.2em;" required *ngIf="i.name==='Address Line 1* :'">
+                    <input type="text" placeholder="30 Jalan Sultan Ismail" name="addline2" style="padding-left: 1.2em;"
+                        *ngIf="i.name==='Address Line 2 :'">
+                    <input type="text" placeholder="Address Line 3 (optional)" name="addline3" style="padding-left: 1.2em;"
+                        *ngIf="i.name==='Address Line 3 :'">
+                    <input type="text" placeholder="50250" name="poscode" style="padding-left: 1.2em;width:6em;" required
+                        *ngIf="i.name==='Postal Code* :'">
+                    <input type="text" placeholder="Kuala Lumpur" name="town/city" style="padding-left: 1.2em;" required
+                        *ngIf="i.name==='Town/City* :'">
+                    <select class="content" *ngIf="i.name==='State* :'">
+                        <option *ngFor="let i of states">{{i.state}}</option>
+                    </select>
+                    <select class="content" *ngIf="i.name==='Country* :'">
+                        <option *ngFor="let i of countries_C">{{i.country}}</option>
+                    </select>
                 </div>
             </div>
 

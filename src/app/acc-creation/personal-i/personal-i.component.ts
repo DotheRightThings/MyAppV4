@@ -13,10 +13,13 @@ export class PersonalIComponent implements OnInit {
 
   }
 
-  model = new Personal_i('', '');
+  model = new Personal_i('', '','','','');
   submitted = false;
   username: string = "";
   password: string = "";
+  FATCA: string="";
+  CRS: string="";
+  sameAdd: string="";
 
   onSubmit() { this.submitted = true; }
 
